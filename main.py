@@ -12,6 +12,15 @@ if __name__ == "__main__":
   print("Head:", list.head)
 
   # TODO: 2) Insert some sample data using insert_at_front or insert_at_end
+  list = LinkedList()
+  
+  list.insert_at_front(30)
+  list.insert_at_front(20)
+  list.insert_at_front(10)
+  
+  print("First node:", list.head.data)
+  print("Second node:", list.head.next.data)
+  print("Third node:", list.head.next.next.data)
   
   # TODO: 3) Display the list to verify insertion
   

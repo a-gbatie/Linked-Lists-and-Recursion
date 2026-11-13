@@ -34,6 +34,9 @@ if __name__ == "__main__":
   
 
   # TODO: 5) Call recursive_search with a target and print result
+  print("Search for 20:", list.recursive_search(20))
+  print("Search for 99:", list.recursive_search(99))
+  print("Search empty list:", empty_list.recursive_search(10))
   
 
   # TODO: 6) Call recursive_reverse, then display the reversed list

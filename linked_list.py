@@ -61,27 +61,36 @@ class LinkedList:
     return helper(self.head) # start the recursion
 
   def recursive_reverse(self):
-      """
-      TODO:
-      - Reverse the list in-place using recursion.
-      - Possible approach:
-        1. Use a helper function that accepts 'prev' and 'current'.
-        2. Base case: if current is None, return 'prev' (new head).
-        3. Otherwise, swap pointers and recurse.
-      - Update 'head' to the returned new head.
-      """
-      pass
+    """
+    TODO:
+    - Reverse the list in-place using recursion.
+    - Possible approach:
+      1. Use a helper function that accepts 'prev' and 'current'.
+      2. Base case: if current is None, return 'prev' (new head).
+      3. Otherwise, swap pointers and recurse.
+    - Update 'head' to the returned new head.
+    """
+  
 
   def recursive_search(self, target):
-      """
-      TODO:
-      - Return True if 'target' is found, otherwise False, using recursion.
-      - Consider a helper function that:
-        1. Returns False if the current node is None.
-        2. Returns True if current node's data == target.
-        3. Otherwise, recurse on the next node.
-      """
-      pass
+    """
+    TODO:
+    - Return True if 'target' is found, otherwise False, using recursion.
+    - Consider a helper function that:
+      1. Returns False if the current node is None.
+      2. Returns True if current node's data == target.
+      3. Otherwise, recurse on the next node.
+    """
+    def helper(node): # helper method
+      if node is None: # ends the recursion when we reach the end of the list
+        return False
+      
+      if node.data == target: # check if the current node matches the target
+        return True
+      
+      return helper(node.next) # start the recursion
+    return helper(self.head) # move onto the next node if value isn't found
+          
 
   def display(self):
     """

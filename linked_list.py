@@ -80,10 +80,21 @@ class LinkedList:
       pass
 
   def display(self):
-      """
-      TODO:
-      - Print the contents of the list for debugging.
-      - Traverse from 'head' and collect each node's data.
-      - Format output as 'val -> val -> val -> None' or similar.
-      """
-      pass
+    """
+    TODO:
+    - Print the contents of the list for debugging.
+    - Traverse from 'head' and collect each node's data.
+    - Format output as 'val -> val -> val -> None' or similar.
+    """
+    current = self.head # current points to first node
+    values = [] # create empty list
+    
+    # traverse the linked list 
+    # checks the node exists 
+    # add the value to list 
+    # moves to the next node
+    while current is not None: 
+      values.append(str(current.data))
+      current = current.next
+
+    print(" -> ".join(values) + " -> None") 

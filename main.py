@@ -13,6 +13,7 @@ if __name__ == "__main__":
 
   # TODO: 2) Insert some sample data using insert_at_front or insert_at_end
   list = LinkedList()
+  empty_list = LinkedList()
   
   list.insert_at_front(30)
   list.insert_at_front(20)
@@ -23,8 +24,16 @@ if __name__ == "__main__":
   print("Third node:", list.head.next.next.data)
   
   # TODO: 3) Display the list to verify insertion
+  list = LinkedList()
+    
+  list.insert_at_front(30)
+  list.insert_at_front(20)
+  list.insert_at_front(10)
   
-
+  print("Linked List:")
+  list.display()
+  empty_list.display()
+  
   # TODO: 4) Call recursive_sum and print the result
   
 

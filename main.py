@@ -40,4 +40,15 @@ if __name__ == "__main__":
   
 
   # TODO: 6) Call recursive_reverse, then display the reversed list
+  print("Before reversing:")
+  list.display()
+  
+  list.recursive_reverse()
+  
+  print("After reversing:")
+  list.display()
+  
+  print("Reversing an empty list:")
+  empty_list.recursive_reverse()
+  empty_list.display()
     

@@ -46,15 +46,19 @@ class LinkedList:
     pass
 
   def recursive_sum(self):
-      """
-      TODO:
-      - Use recursion to sum all node data in the list.
-      - Consider a helper function that:
-        1. Checks if the current node is None, and returns 0 if so.
-        2. Otherwise, returns node.data + recursive call on node.next.
-      - Return the total sum.
-      """
-      pass
+    """
+    TODO:
+    - Use recursion to sum all node data in the list.
+    - Consider a helper function that:
+      1. Checks if the current node is None, and returns 0 if so.
+      2. Otherwise, returns node.data + recursive call on node.next.
+    - Return the total sum.
+    """
+    def helper(node): # helper function - takes node as its argument
+      if node is None: # when there are no more nodes return 0
+        return 0
+      return node.data + helper(node.next) # define recursive case - takes the current node's value plus the sum of remaining nodes
+    return helper(self.head) # start the recursion
 
   def recursive_reverse(self):
       """

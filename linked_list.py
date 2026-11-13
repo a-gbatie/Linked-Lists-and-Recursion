@@ -43,7 +43,18 @@ class LinkedList:
     - Traverse to the end of the list.
     - Set the last node's 'next' reference to the new node.
     """
-    pass
+    new_node = Node(data)
+    
+    if self.head is None:
+      self.head = new_node
+      return
+    
+    current = self.head
+
+    while current.next is not None:
+      current = current.next
+
+    current.next = new_node
 
   def recursive_sum(self):
     """
